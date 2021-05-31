@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/skinnypete/Documents/test-project/FirstApplication/FirstApplication.csproj": {}
+    "/home/skinnypete/Documents/Dotnet-core/FirstApplication/FirstApplication.csproj": {}
   },
   "projects": {
-    "/home/skinnypete/Documents/test-project/FirstApplication/FirstApplication.csproj": {
+    "/home/skinnypete/Documents/Dotnet-core/FirstApplication/FirstApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/skinnypete/Documents/test-project/FirstApplication/FirstApplication.csproj",
+        "projectUniqueName": "/home/skinnypete/Documents/Dotnet-core/FirstApplication/FirstApplication.csproj",
         "projectName": "FirstApplication",
-        "projectPath": "/home/skinnypete/Documents/test-project/FirstApplication/FirstApplication.csproj",
+        "projectPath": "/home/skinnypete/Documents/Dotnet-core/FirstApplication/FirstApplication.csproj",
         "packagesPath": "/home/skinnypete/.nuget/packages/",
-        "outputPath": "/home/skinnypete/Documents/test-project/FirstApplication/obj/",
+        "outputPath": "/home/skinnypete/Documents/Dotnet-core/FirstApplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/skinnypete/.nuget/NuGet/NuGet.Config"

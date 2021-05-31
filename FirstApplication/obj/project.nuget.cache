@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wiQP0BKtBHQIDgObZJnlWAR4SdKZsUeIAAUYjCfyzuQnbHedWA08ZpdprC7W/owtACZzBIReBUfiw0VhU4fhJw==",
+  "dgSpecHash": "xc0dFJLHp0i3ydj9TMICrAvhMq3C7JZEnl92WhOKE1VqRpsAQctnTLlzJYbaWR9s3F/8GvKayVoPw9w1yQfn2w==",
   "success": true,
-  "projectFilePath": "/home/skinnypete/Documents/test-project/FirstApplication/FirstApplication.csproj",
+  "projectFilePath": "/home/skinnypete/Documents/Dotnet-core/FirstApplication/FirstApplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
