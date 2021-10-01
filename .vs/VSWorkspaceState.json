@@ -1,11 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Microservice-Project",
-    "\\Microservice-Project\\PlatformService",
-    "\\Microservice-Project\\PlatformService\\Data",
-    "\\Microservice-Project\\PlatformService\\Models"
+    ""
   ],
-  "SelectedNode": "\\Microservice-Project\\PlatformService\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
