@@ -1,0 +1,6 @@
+Create an image from your application:
+	docker build -t <your docker hub id>/platformservice .
+	example: docker build -t skinnypete997/platformservice .
+
+Run an image as a container:
+docker run -p 8080:80 -d <docker hub id>/platformservice
