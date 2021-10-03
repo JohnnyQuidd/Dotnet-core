@@ -49,3 +49,7 @@ To check if a service is created:
 	kubectl get services
 
 	Under section PORT(S) there will be some port formated like this: 80:31613/TCP. Which means, that Kubernetes assigned port 31613 for us to send requests to!
+
+Use asynchronous communication as much as possible to avoid dependency chain between services.
+
+For Http Client consider using Factory Design pattern
