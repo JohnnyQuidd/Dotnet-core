@@ -53,3 +53,9 @@ To check if a service is created:
 Use asynchronous communication as much as possible to avoid dependency chain between services.
 
 For Http Client consider using Factory Design pattern
+
+We are redeploying an image every time we change config files. That's suboptimal approach, but for purpose of this example, it will do it just fine
+
+If we have new image on Docker Hub and want to update our current service in Kubernetes, we'll use the following command:
+	> kubectl get deployments
+	> kubectl rollout restart deployment platforms-depl

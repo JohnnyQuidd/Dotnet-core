@@ -6,7 +6,7 @@ using PlatformService.Dtos;
 
 namespace PlatformService.SyncDataServices.Http
 {
-	interface ICommandDataClient
+	public interface ICommandDataClient
 	{
 		Task SendPlatformToCommand(PlatformReadDto platform);
 	}
