@@ -1,0 +1,51 @@
+Create an image from your application:
+	docker build -t <your docker hub id>/platformservice .
+	example: docker build -t skinnypete997/platformservice .
+
+Run an image as a container:
+docker run -p 8080:80 -d <docker hub id>/platformservice
+
+Docker run every time creates and runs a new container for provided image. Otherwise use: docker start <containerId>
+
+To log to docker:
+	docker login -u "username123" -p "password123"
+
+Pushing an image to Docker Hub
+	docker push <docker hub id>/platformservice
+
+Kubernetes terminology:
+
+Cluster - A cluster is a group of inter-connected computers that work together to perform computationally intensive tasks. In a cluster, each computer is referred to as a "node"
+Node - A single computer in a cluster (may be a physical or a virtual machine)
+Pod - The samllest execution unit in Kubernetes. Always runs on Node, a Node can have multiple Pods. A Pod runs containers, a single Pod can run multiple containers.
+Node Port - A Kubernetes service (used in development phase, not in production environment). Used to get access to Pods. Kubernetes will generate 5 digit number starting with 3... 3XXXX for external port, but as internal port, it will use port 80.
+
+In order for Pods to talk to each other, they need to get ClusterIp Service. Cluster Ip service is used only for container to container communication
+
+In production, we would use Ingress Nginx Controller. It's like an API Gateway, it runs on it's own Pod. It works in conjunction with Ingress Nginx Load Balancer. Ingress Nginx Controller hits port that container exposed, it doesn't use container's Cluster IP!
+
+Pod that contains database has to have access to Persistent Volume Claim (persistent storage space)
+
+Kubernetes apply:
+	kubectr apply -f platforms-depl.yml
+
+To check for deployments:
+	kubectl get deployments
+	
+To get pods:
+	kubectl get pods
+
+Now if we list all containers, there will be one container running and one pod active. However, if we perform docker rmi <containerId> and kill a container, a new instance of a container will be started soon after. That's Kubernetes autorecovery!
+
+To delete deployment, use:
+	kubectl delete deployment platforms-depl
+
+Next thing is to create Node Port, so we can communicate with our containers. We only specify one port for Node Port, as the other port is generated for us. And we also have to specify the target port of a container. (platforms-np-srv.yaml)
+
+To apply node Port
+	kubectl apply -f platforms-np-srv.yaml
+
+To check if a service is created:
+	kubectl get services
+
+	Under section PORT(S) there will be some port formated like this: 80:31613/TCP. Which means, that Kubernetes assigned port 31613 for us to send requests to!
